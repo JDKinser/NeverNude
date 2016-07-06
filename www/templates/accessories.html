@@ -1,0 +1,26 @@
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+
+    <!-- items -->
+    <div class="sectionsitems" ng-controller="SectionsItemsController">
+      <h1>accessories</h1>
+      <div ng-repeat="picture in pictures">
+        <img ng-src="{{ picture }}">
+        <p>{{ items[$index].id }}</p>
+        <p>{{ items[$index].created_at | date }}</p>
+      </div>
+    </div>
+
+    <!-- (all) tags -->
+    <!-- <div class="tags" ng-controller="TagsController">
+      <h1>/tags</h1>
+      <div ng-repeat="tag in tags">
+        <p>{{ tag.id }}</p>
+        <p>{{ tag.name }}</p>
+      </div>
+    </div> -->
+
+  </ion-header-bar>
+  <ion-content>
+  </ion-content>
+</ion-pane>

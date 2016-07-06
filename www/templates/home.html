@@ -1,17 +1,51 @@
-<ion-header-bar class='bar-dark'></ion-header-bar>
-<ion-content class='has-footer'>
+<ion-header-bar class='bar-dark home-nav-bar'>
 
-<div class="test" ng-controller="TestsController">
-	<div class='photo-container'>
-		<ion-slide-box>
-			<ion-slide ng-repeat="picture in pictures">
-				<img class='photos' ng-src="{{picture.cover}}">
-			</ion-slide>	
-		</ion-slide-box>
+	<div class="title-container">
+		<h1 class="homepage-title">Wardrobe</h1>
+	</div>
+    <button class="dropdown-menu-button" ng-click="doSomething()">
+    	<i class="icon ion-navicon"></i>
+    </button>
+    
+</ion-header-bar>
+<ion-content class='has-footer'>
+<div class="closet-slider-container">
+	<div class="sectionsitems" ng-controller="SectionsItemsController">
+		<div class='photo-container accessories'>
+			<ion-slide-box>
+				<ion-slide ng-repeat="accerPicture in accerPictures">
+					<img class='photos' ng-src="{{ accerPicture }}">
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+
+		<div class='photo-container tops'>
+			<ion-slide-box>
+				<ion-slide ng-repeat="topsPicture in topsPictures">
+					<img class='photos' ng-src="{{ topsPicture }}">
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+		<i class="icon ion-tshirt-outline"></i>
+
+		<div class='photo-container bottoms'>
+			<ion-slide-box>
+				<ion-slide ng-repeat="bottomsPicture in bottomsPictures">
+					<img class='photos' ng-src="{{ bottomsPicture }}">
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+
+		<div class='photo-container footwear'>
+			<ion-slide-box>
+				<ion-slide ng-repeat="footPicture in footPictures">
+					<img class='photos' ng-src="{{ footPicture }}">
+				</ion-slide>
+			</ion-slide-box>
+		</div>
 	</div>
 </div>
-	
-<ion-spinner icon="ripple"></ion-spinner>
-	
+<!-- <ion-spinner icon="ripple"></ion-spinner> -->
+
 </ion-content>
 <ion-footer-bar class='bar-dark'></ion-footer-bar>
