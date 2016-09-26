@@ -7,7 +7,6 @@
 var rootUrl = 'https://nevernude.herokuapp.com'
 var neverNude = angular.module('neverNude', ['ionic', 'ngResource', 'ngCordova'])
 
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -41,4 +40,3 @@ var neverNude = angular.module('neverNude', ['ionic', 'ngResource', 'ngCordova']
     .state('profile', {url: '/profile', templateUrl: 'templates/profile.html'});
   $urlRouterProvider.otherwise('/login');
 });
-
