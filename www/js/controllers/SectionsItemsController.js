@@ -1,4 +1,4 @@
-neverNude.controller('SectionsItemsController', ['$scope', '$ionicSlideBoxDelegate', 'sectionsitems', '$http', '$state', '$ionicPopup', function($scope, $ionicSlideBoxDelegate, sectionsitems, $http, $state, $ionicPopup) {
+neverNude.controller('SectionsItemsController', ['$scope', '$ionicSlideBoxDelegate', 'sectionsitems', '$http', '$state', '$ionicPopup', 'outfits', function($scope, $ionicSlideBoxDelegate, sectionsitems, $http, $state, $ionicPopup, outfits) {
 
   showAlert = function(alert) {
     var alertPopup = $ionicPopup.alert({
@@ -6,6 +6,15 @@ neverNude.controller('SectionsItemsController', ['$scope', '$ionicSlideBoxDelega
       cssClass: 'popupstyle'
     });
   };
+
+  getOutfits = function() {
+    outfits.get({ id: 2 }, function(data) {
+      $scope.outfits_items = data.outfits_items;
+      $scope.pictures = data.image_urls;
+    });
+  };
+
+  getOutfits();
 
   $scope.updateSlider = function () {
     $ionicSlideBoxDelegate.update();
@@ -78,6 +87,7 @@ neverNude.controller('SectionsItemsController', ['$scope', '$ionicSlideBoxDelega
     .success(function(data) {
       $state.go('outfits');
       showAlert('Outfit saved.');
+      getOutfits();
     })
     .error(function() {
       showAlert('There was an error. Please try again.')

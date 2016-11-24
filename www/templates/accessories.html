@@ -1,18 +1,17 @@
 <ion-pane>
   <ion-header-bar class="bar-dark accessories-header">
 
-  <div class="title-container">
-    <h1 class="homepage-title">Accessories</h1>
-  </div>
+    <div class="title-container">
+      <h1 class="homepage-title">Accessories</h1>
+    </div>
 
-  <a class='accessories-back-btn'href="#/home">
-    <i class="ion-ios-arrow-left"></i>
-  </a>
+    <a class='accessories-back-btn' href="#/home">
+      <i class="ion-ios-arrow-left"></i>
+    </a>
 
   </ion-header-bar>
 
-
-    <div class="sectionsitems" ng-controller="SectionsItemsController">
+  <div class="sectionsitems" ng-controller="SectionsItemsController">
 
     <div class='accessories-photo-container'>
       <ion-slide-box>
@@ -22,17 +21,23 @@
       </ion-slide-box>
     </div>
 
-    </div>
+  </div>
 
-    <!-- (all) tags -->
-    <div class="tag-container">
-      <div class="tags" ng-controller="TagsController">
-        <!-- <div ng-repeat="tag in tags"> -->
-        <div>
-          <p class="tagsfix"> Tags </p>
+  <!-- (all) tags -->
+  <div class="tag-container">
+    <div class="tags" ng-controller="TagsController">
+      <div>
+        <p class="tagsfix">
+          Tags
+        </p>
+        <div ng-repeat="tag in tags">
+          <div>
+            <strong>{{tag}}</strong>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
 </ion-pane>
 

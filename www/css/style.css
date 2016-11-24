@@ -241,6 +241,12 @@ ion-spinner svg {
     left: 144px;
 }
 
+.randombtn {
+    font-size: 35px;
+    color: black;
+    margin-right: 15px;
+}
+
 .home-nav-bar {
     border-bottom: 2px solid #000;
 }

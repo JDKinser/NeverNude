@@ -6,14 +6,14 @@
 
     <a class='accessories-back-btn'href="#/home">
     	<i class="ion-ios-arrow-left"></i>
-  	</a> 
-    
+  	</a>
+
 </ion-header-bar>
 
 <ion-content ng-controller="SectionsItemsController">
 <div class="full-outfits-container">
-	<div class="outfits" ng-controller="OutfitsController">
-		
+	<div class="outfits">
+
 		<div class='outfit-photo-container'>
 			<ion-slide-box>
 				<ion-slide ng-repeat="picture in pictures" ng-init="updateSlider()">
